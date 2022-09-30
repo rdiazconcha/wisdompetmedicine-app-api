@@ -14,6 +14,6 @@ jobs:
         uses: ./actions
         id: personajes
         with:
-          person_id: 1
+          person_id: ${{ github.run_number }}
       - name: Regresa el personaje
         run: echo "${{ steps.personajes.outputs.person_name }}"
