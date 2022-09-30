@@ -9,7 +9,7 @@ jobs:
     runs-on: [self-hosted, windows]
     steps:
     - name: show
-      run: echo $GITHUB_WORKSPACE && ls
+      run: echo $env:GITHUB_WORKSPACE ls
     - uses: actions/checkout@v3
     - name: docker build
       run: docker build src --file src/WisdomPetMedicine.Api/Dockerfile --tag github-action-esencial
