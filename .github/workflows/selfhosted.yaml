@@ -6,7 +6,7 @@ on:
 jobs:
   docker:
     name: Contenerización con Docker y .NET
-    runs-on: [self-hosted, linux]
+    runs-on: [self-hosted, windows]
     steps:
     - name: show
       run: echo $GITHUB_WORKSPACE && ls
