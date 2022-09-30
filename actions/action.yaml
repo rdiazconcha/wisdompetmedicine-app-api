@@ -1,16 +1,16 @@
 # action.yaml
-name: 'Blog Custom Github Action'
-description: 'Call an API and get the result'
+name: 'Nombre del personaje de SW'
+description: 'Regresa el nombre del personaje'
 inputs:
-  pokemon_id:
-    description: 'number of the pokemon in the pokedex'
+  person_id:
+    description: 'Id del personaje'
     required: true
     default: 1
 outputs:
-  pokemon_name:
-    description: 'Name des Pokemons'
+  person_name:
+    description: 'Nombre del personaje'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.pokemon_id}}
+    - ${{ inputs.person_id}}

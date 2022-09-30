@@ -1,7 +1,4 @@
-# Base image
 FROM alpine:latest
-
-# installes required packages for our script
 RUN	apk add --no-cache \
   bash \
   ca-certificates \
