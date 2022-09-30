@@ -9,7 +9,7 @@ env:
 
 jobs:
   build:
-    runs-on: MGR2-BTH203W-UBUNTU
+    runs-on: [self-hosted, linux]
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
