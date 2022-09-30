@@ -1,4 +1,4 @@
-name: Secretos
+name: Runners
 
 on:
   workflow_dispatch:
@@ -9,7 +9,7 @@ env:
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: MGR2-BTH203W-UBUNTU
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
