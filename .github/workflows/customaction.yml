@@ -12,8 +12,8 @@ jobs:
         run: echo Hello, world!
       - name: Nombres de personajes
         uses: ./actions
-        id: personaje
+        id: personajes
         with:
-          personaje_id: 1
+          person_id: 1
       - name: Regresa el personaje
-        run: echo "${{ steps.personaje.outputs.personaje_name }}"
+        run: echo "${{ steps.personajes.outputs.person_name }}"
