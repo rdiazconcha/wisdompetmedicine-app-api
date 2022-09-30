@@ -1,0 +1,20 @@
+name: Custom actions
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test_actions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        run: echo Hello, world!
+      - name: Get Pokemon name
+        uses: ./actions # Uses an action in the root directory
+        id: pokemon
+        with:
+          pokemon_id: 150
+      # Use the pokemon_name output from our action (id:pokemon)
+      - name: Get the pokemon
+        run: echo "${{ steps.pokemon.outputs.pokemon_name }} attack"
