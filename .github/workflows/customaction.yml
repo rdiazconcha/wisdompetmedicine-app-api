@@ -14,7 +14,7 @@ jobs:
         uses: ./actions # Uses an action in the root directory
         id: pokemon
         with:
-          pokemon_id: 150
+          pokemon_id: 1
       # Use the pokemon_name output from our action (id:pokemon)
       - name: Get the pokemon
         run: echo "${{ steps.pokemon.outputs.pokemon_name }} attack"
