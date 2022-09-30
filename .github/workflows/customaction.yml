@@ -10,11 +10,10 @@ jobs:
       - uses: actions/checkout@v3
       - name: Run a one-line script
         run: echo Hello, world!
-      - name: Get Pokemon name
-        uses: ./actions # Uses an action in the root directory
-        id: pokemon
+      - name: Nombres de personajes
+        uses: ./actions
+        id: personaje
         with:
-          pokemon_id: 1
-      # Use the pokemon_name output from our action (id:pokemon)
-      - name: Get the pokemon
-        run: echo "${{ steps.pokemon.outputs.pokemon_name }} attack"
+          personaje_id: 1
+      - name: Regresa el personaje
+        run: echo "${{ steps.personaje.outputs.personaje_name }}"
