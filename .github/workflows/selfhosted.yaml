@@ -8,8 +8,6 @@ jobs:
     name: Contenerización con Docker y .NET
     runs-on: [self-hosted, windows]
     steps:
-    - name: show
-      run: echo $env:GITHUB_WORKSPACE ls
     - uses: actions/checkout@v3
     - name: docker build
       run: docker build src --file src/WisdomPetMedicine.Api/Dockerfile --tag github-actions-esencial:runner
